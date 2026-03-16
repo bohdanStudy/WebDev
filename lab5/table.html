@@ -9,88 +9,190 @@
 </head>
 <body>
 
-<div class="overflow-x-auto bg-white rounded-lg border border-gray-200 m-4">
-  <table class="w-full text-left border-collapse table-auto">
-    <thead class="bg-gray-50 text-gray-600 text-sm font-medium">
-    <tr>
-      <th></th>
-      <th class="p-4 font-semibold text-left border-r">Address</th>
-      <th class="p-4 font-semibold text-center">Skip-Traced?</th>
-      <th class="p-4 font-semibold">
-        <div class="flex items-center justify-center gap-1">
-          <span>Deal Type</span>
-          <iconify-icon
-            icon="lucide:info"
-            class="text-xs text-gray-400 mt-1 flex-shrink-0"
-            style="font-size: 15px;">
-          </iconify-icon>
-        </div>
-      </th>
-      <th class="p-4 font-semibold text-center">Est Price/SqFt</th>
-      <th class="p-4 font-semibold">
-        <div class="flex items-center justify-center gap-1">
-          <span>Motivation(s)</span>
-          <iconify-icon
-            icon="lucide:info"
-            class="text-xs text-gray-400 mt-1 flex-shrink-0"
-            style="font-size: 15px;">
-          </iconify-icon>
-        </div>
-      </th>
-      <th class="p-4 font-semibold">Property Status</th>
-    </tr>
-    </thead>
+<div class="max-w-full mx-auto bg-white rounded-lg border border-gray-200 shadow-sm overflow-x-auto">
+
+  <div class="flex items-center justify-between p-4">
+    <div class="flex items-center gap-2">
+      <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
+      <iconify-icon icon="lucide:chevron-down" class="text-gray-400 text-xs"></iconify-icon>
+    </div>
+
+    <div class="flex items-center gap-6 text-sm text-gray-600 font-medium">
+      <button class="flex items-center gap-2 transition-colors">
+        <iconify-icon icon="lucide:layout-template" class="text-lg text-gray-400"></iconify-icon>
+        <span>Display</span>
+      </button>
+      <button class="flex items-center gap-2 transition-colors">
+        <iconify-icon icon="lucide:list-filter" class="text-lg text-gray-400"></iconify-icon>
+        <span>Sort by</span>
+      </button>
+      <button class="flex items-center gap-2 transition-colors">
+        <iconify-icon icon="lucide:more-vertical" class="text-lg text-gray-400"></iconify-icon>
+        <span>Actions</span>
+      </button>
+    </div>
+  </div>
 
 
-    <tbody class="text-sm text-gray-700">
-    <tr class="hover:bg-gray-50 transition-colors">
-      <td class="p-4 text-center">
-        <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
-      </td>
-      <td class="p-4 border-r border-gray-200 text-left">
-        <div class="flex items-center justify-between">
-          <div class="flex flex-col">
-      <span class="font-bold text-gray-800 border-b border-gray-800 pb-[1px] cursor-pointer w-fit leading-none">
-        5418 W WASHINGTON BLVD
-      </span>
-            <p class="text-gray-400 text-xs mt-1 uppercase">LOS ANGELES, CA, 90016</p>
+
+
+  <div class="overflow-x-auto bg-white rounded-lg border border-gray-200 m-4">
+    <table class="w-full text-left border-collapse table-auto">
+      <thead class="bg-gray-50 text-gray-600 text-sm font-medium">
+      <tr>
+        <th></th>
+        <th class="p-4 font-semibold text-left border-r">Address</th>
+        <th class="p-4 font-semibold text-center">Skip-Traced?</th>
+        <th class="p-4 font-semibold">
+          <div class="flex items-center justify-center gap-1">
+            <span>Deal Type</span>
+            <iconify-icon
+              icon="lucide:info"
+              class="text-xs text-gray-400 mt-1 flex-shrink-0"
+              style="font-size: 15px;">
+            </iconify-icon>
           </div>
-          <iconify-icon icon="lucide:image" class="text-gray-300 text-xl ml-4 flex-shrink-0"></iconify-icon>
-        </div>
-      </td>
-      <td class="p-4 text-center">
-        <iconify-icon icon="lucide:search-check" class="text-gray-400 text-2xl"></iconify-icon>
-      </td>
-      <td class="p-4 text-center">0</td>
-      <td class="p-4 text-center"></td>
-      <td class="p-4 text-center">8</td>
-      <td class="p-4 text-left">Off Market (Motivated)</td>
-    </tr>
-
-    <tr class="hover:bg-gray-50 transition-colors">
-      <td class="p-4 text-center">
-        <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
-      </td>
-      <td class="p-4 border-r border-gray-200 text-left">
-        <div class="flex items-center justify-between">
-          <div class="flex flex-col">
-      <span class="font-bold text-gray-800 border-b border-gray-800 pb-[1px] cursor-pointer w-fit leading-none">
-        5418 W WASHINGTON BLVD
-      </span>
-            <p class="text-gray-400 text-xs mt-1 uppercase">LOS ANGELES, CA, 90016</p>
+        </th>
+        <th class="p-4 font-semibold text-center">Est Price/SqFt</th>
+        <th class="p-4 font-semibold">
+          <div class="flex items-center justify-center gap-1">
+            <span>Motivation(s)</span>
+            <iconify-icon
+              icon="lucide:info"
+              class="text-xs text-gray-400 mt-1 flex-shrink-0"
+              style="font-size: 15px;">
+            </iconify-icon>
           </div>
-          <iconify-icon icon="lucide:image" class="text-gray-300 text-xl ml-4 flex-shrink-0"></iconify-icon>
-        </div>
-      </td>
-      <td class="p-4 text-center"></td>
-      <td class="p-4 text-center">0</td>
-      <td class="p-4 text-center">$439</td>
-      <td class="p-4 text-center">10</td>
-      <td class="p-4 text-gray-600">Off Market (Motivated)</td>
-    </tr>
-    </tbody>
-  </table>
-</div>
+        </th>
+        <th class="p-4 font-semibold">Property Status</th>
+      </tr>
+      </thead>
+
+
+      <tbody class="text-sm text-gray-700">
+
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="p-4 text-center">
+          <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
+        </td>
+        <td class="p-4 border-r border-gray-200 text-left">
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+        <span class="font-bold text-gray-800 border-b border-gray-800 pb-[1px] w-fit leading-none">
+          5418 W WASHINGTON BLVD
+        </span>
+              <p class="text-gray-400 text-xs mt-1">LOS ANGELES, CA, 90016</p>
+            </div>
+            <iconify-icon icon="lucide:image" class="text-gray-300 text-xl ml-4 flex-shrink-0"></iconify-icon>
+          </div>
+        </td>
+        <td class="p-4 text-center border-b">
+          <iconify-icon icon="lucide:search-check" class="text-gray-400 text-2xl"></iconify-icon>
+        </td>
+        <td class="p-4 text-center border-b">0</td>
+        <td class="p-4 text-center border-b"></td>
+        <td class="p-4 text-center border-b">8</td>
+        <td class="p-4 text-left border-b">Off Market (Motivated)</td>
+      </tr>
+
+
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="p-4 text-center">
+          <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
+        </td>
+        <td class="p-4 border-r border-gray-200 text-left">
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+        <span class="font-bold text-gray-800 border-b border-gray-800 pb-[1px]  w-fit leading-none">
+          4221 ABNER ST
+        </span>
+              <p class="text-gray-400 text-xs mt-1">LOS ANGELES, CA, 90032</p>
+            </div>
+            <iconify-icon icon="lucide:image" class="text-gray-300 text-xl ml-4 flex-shrink-0"></iconify-icon>
+          </div>
+        </td>
+        <td class="p-4 text-center border-b"></td>
+        <td class="p-4 text-center border-b">0</td>
+        <td class="p-4 text-center border-b">$439</td>
+        <td class="p-4 text-center border-b">10</td>
+        <td class="p-4 text-gray-600 border-b">Off Market (Motivated)</td>
+      </tr>
+
+
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="p-4 text-center">
+          <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
+        </td>
+        <td class="p-4 border-r border-gray-200 text-left">
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+        <span class="font-bold text-gray-800 border-b border-gray-800 pb-[1px] w-fit leading-none">
+          121 S HOPE APT 506
+        </span>
+              <p class="text-gray-400 text-xs mt-1">LOS ANGELES, CA, 90012</p>
+            </div>
+            <iconify-icon icon="lucide:image" class="text-gray-300 text-xl ml-4 flex-shrink-0"></iconify-icon>
+          </div>
+        </td>
+        <td class="p-4 text-center border-b">
+          <iconify-icon icon="lucide:search-check" class="text-gray-400 text-2xl"></iconify-icon>
+        </td>
+        <td class="p-4 text-center border-b">0</td>
+        <td class="p-4 text-center border-b">$562</td>
+        <td class="p-4 text-center border-b">10</td>
+        <td class="p-4 text-left border-b">Off Market (Motivated)</td>
+      </tr>
+
+
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="p-4 text-center">
+          <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
+        </td>
+        <td class="p-4 border-r border-gray-200 text-left">
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+        <span class="font-bold text-gray-800 border-b border-gray-800 pb-[1px]  w-fit leading-none">
+          3132 E PICO BLVD
+        </span>
+              <p class="text-gray-400 text-xs mt-1 uppercase">LOS ANGELES, CA, 90023</p>
+            </div>
+            <iconify-icon icon="lucide:image" class="text-gray-300 text-xl ml-4 flex-shrink-0"></iconify-icon>
+          </div>
+        </td>
+        <td class="p-4 text-center border-b"></td>
+        <td class="p-4 text-center border-b">0</td>
+        <td class="p-4 text-center border-b"></td>
+        <td class="p-4 text-center border-b">5</td>
+        <td class="p-4 text-gray-600 border-b">Off Market (Motivated)</td>
+      </tr>
+
+
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="p-4 text-center">
+          <input type="checkbox" class="w-4 h-4 rounded border-gray-300">
+        </td>
+        <td class="p-4 border-r border-gray-200 text-left">
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col">
+        <span class="font-bold text-gray-800 border-b border-gray-800 pb-[1px]  w-fit leading-none">
+          777 E PICO BLVD
+        </span>
+              <p class="text-gray-400 text-xs mt-1 uppercase">LOS ANGELES, CA, 90021</p>
+            </div>
+            <iconify-icon icon="lucide:image" class="text-gray-300 text-xl ml-4 flex-shrink-0"></iconify-icon>
+          </div>
+        </td>
+        <td class="p-4 text-center border-b"></td>
+        <td class="p-4 text-center border-b">0</td>
+        <td class="p-4 text-center border-b"></td>
+        <td class="p-4 text-center border-b">6</td>
+        <td class="p-4 text-gray-600 border-b">Off Market (Motivated)</td>
+      </tr>
+
+      </tbody>
+    </table>
+    </div>
+  </div>
 
 </body>
 </html>
