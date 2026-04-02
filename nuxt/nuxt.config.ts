@@ -29,5 +29,13 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  app: {
+    head: {
+      script: [
+        { src: 'https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js' }
+      ]
+    }
   }
 })
