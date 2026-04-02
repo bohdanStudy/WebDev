@@ -34,7 +34,7 @@ async function loadCounties() {
       code: row[1] + row[2]
     };
   });
-  console.log("Дані завантажено!");
+  console.log("Дані завантажено");
 }
 
 function getCode(Name) {
@@ -74,7 +74,7 @@ userForm.addEventListener('submit', function(event) {
   // Перевірка на порожні поля
   if (firstName === "" || lastName === "" || email === "") {
     event.preventDefault(); // Зупиняємо відправку
-    alert("Помилка: Усі поля мають бути заповнені!");
+    alert("Помилка: Усі поля мають бути заповнені");
   } else {
     // Якщо все добре, виводимо дані
     alert(`Користувач: ${firstName} ${lastName}, Email: ${email}`);
