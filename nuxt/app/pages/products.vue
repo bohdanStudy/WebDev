@@ -125,7 +125,8 @@ function toggleSort(key) {
 }
 
 function sortIcon(key) {
-  if (sortKey.value !== key) return 'fluent:arrow-sort-16-filled'
+  if (sortKey.value !== key)
+    return 'fluent:arrow-sort-16-filled'
   return sortDesc.value ? 'fluent:arrow-sort-down-16-filled' : 'fluent:arrow-sort-up-16-filled'
 }
 
@@ -137,13 +138,15 @@ watch(search, () => {
 
 const filteredRows = computed(() => {
   const products = data.value?.products ?? []
-  if (!search.value) return products
+  if (!search.value)
+    return products
   const q = search.value.toLowerCase()
   return products.filter(p => p.title.toLowerCase().includes(q))
 })
 
 const sortedRows = computed(() => {
-  if (!sortKey.value) return filteredRows.value
+  if (!sortKey.value)
+    return filteredRows.value
   return [...filteredRows.value].sort((a, b) => {
     const aVal = a[sortKey.value]
     const bVal = b[sortKey.value]
