@@ -181,9 +181,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Plan } from '~/types/plans'
+import { storeToRefs } from 'pinia'
 
-const plan = useState<Plan | null>('selectedPlan')
+const subscriptionStore = useSubscriptionStore()
+const { plan } = storeToRefs(subscriptionStore)
 
 const trialEndDate = computed(() => {
   const date = new Date()

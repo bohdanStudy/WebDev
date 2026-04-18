@@ -62,7 +62,7 @@
           class="hover:bg-gray-50 transition-colors border-b border-gray-200"
         >
           <td class="p-4 border-r border-gray-200">
-            <span class="font-bold text-gray-800 border-b border-gray-800 pb-[1px] w-fit leading-none">
+            <span class="font-bold text-gray-800 border-b border-gray-800 pb-px w-fit leading-none">
               {{ row.title }}
             </span>
           </td>
@@ -107,7 +107,12 @@
 </template>
 
 <script setup>
+import { storeToRefs } from 'pinia'
+
 useHead({ title: 'Список продуктів' })
+
+const subscriptionStore = useSubscriptionStore()
+const { plan } = storeToRefs(subscriptionStore)
 
 const { data } = await useFetch('/api/products')
 

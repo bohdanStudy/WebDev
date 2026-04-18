@@ -78,16 +78,27 @@
 
 <script setup lang="ts">
 import type { Plan } from '~/types/plans'
+import { storeToRefs } from 'pinia'
+
+const subscriptionStore = useSubscriptionStore()
+
+const { plan } = storeToRefs(subscriptionStore)
+
+const trialEndDate = computed(() => {
+  const date = new Date()
+  date.setDate(date.getDate() + 3)
+  return date.toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' })
+})
+
+useHead({ title: 'Checkout - ' + (plan.value?.name || 'Subscription') })
 
 const activeTab = ref('annual')
 const router = useRouter()
 
 const { data: plans } = await useFetch<Plan[]>('/api/plans')
 
-const selectedPlan = useState<Plan | null>('selectedPlan', () => null)
-
 const selectPlan = (plan: Plan) => {
-  selectedPlan.value = plan
-  router.push('/subscription')
+  subscriptionStore.setPlan(plan)
+  router.push('/checkout')
 }
 </script>
